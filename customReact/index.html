@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="./customreact.js"></script>
+    <script>
+        let a = 5; let b = 5; let c = 5;
+
+        function checkMax(num1, num2, num3) {
+            let min1
+            let min2
+            let max
+            if (num1 >= num2 && num1 >= num3) {
+                min1 = num2;
+                min2 = num3;
+                max = num1;
+            } else if (num2 >= num1 && num2 >= num3) {
+                max = num2;
+                min1 = num1;
+                min2 = num3;
+            } else {
+                max = num3;
+                min1 = num1;
+                min2 = num2;
+            }
+
+
+            const sum = (min1 + min2) * max
+
+            return sum;
+        }
+
+        const sumUmber = checkMax(a, b, c)
+        console.log("sumnumber", sumUmber);
+
+    </script>
+</body>
+
+</html>
