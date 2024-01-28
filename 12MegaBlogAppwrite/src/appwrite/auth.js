@@ -49,19 +49,16 @@ export class AuthService {
       // throw error
       console.log("Appwrite service :: getCurrentUser::error", error);
     }
-    return null;    
+    return null;
   }
-    
-    async logout() {
-      try {
-        
-      } catch (error) {
-        console.log("Appwrite service :: logout::error", error);
-      }
-  }  
+
+  async logout() {
+    try {
+    } catch (error) {
+      console.log("Appwrite service :: logout::error", error);
+    }
+  }
 }
 
-
-
-const authservice = AuthService();
+const authservice = new AuthService();
 export default authservice;
